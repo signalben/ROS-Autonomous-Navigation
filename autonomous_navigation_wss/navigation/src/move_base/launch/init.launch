@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>	
+
+<launch>
+
+   <master auto="start"/>
+
+  <include file="$(find vrep_simulation)/launch/vrep_simulation.launch" />
+  <include file="$(find turtlebot_rviz_launchers)/launch/turtlebot_rviz.launch" />
+
+</launch> 
+
+
+
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>	
+
+<launch>
+    
+  <!-- param name ="/use_sim_time" value="true"/ -->
+  
+  <arg name="scene" default="$(find vrep_simulation)/scenes/maze_light.ttt" />    
+  
+  <arg name="headless" default="0" />
+  
+  <node name="vrep_simulation" pkg="vrep_simulation" type="vrep_simulation" args="$(arg scene) $(arg headless)" />
+  
+</launch>
