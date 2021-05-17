@@ -3,13 +3,13 @@ DWAPlannerROS:
 
    
   acc_lim_x: 0.8
-  acc_lim_y: 0
-  acc_lim_th: 2
+  acc_lim_y: 0.0
+  acc_lim_th: 2.0
 
   max_vel_x: 1.6
   min_vel_x: 0.0
-  max_vel_y: 0
-  min_vel_y: 0
+  max_vel_y: 0.0
+  min_vel_y: 0.0
 
   max_trans_vel: 2.0
   min_trans_vel: 0.1
@@ -39,4 +39,4 @@ DWAPlannerROS:
   max_scaling_factor: 0.2 # The maximum factor to scale the robot's footprint by
 
   
-  oscillation_reset_dist: 0.25 #How far the robot must travel in meters before oscillation flags are reset (double, default: 0.05)
+  oscillation_reset_dist: 0.25 #How far the robot must travel in meters before oscillation flags are reset (double, default: 0.05) a 0.8, 2.0,         1.6,  2.0, 8.0,0.1

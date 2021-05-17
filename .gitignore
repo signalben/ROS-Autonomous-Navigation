@@ -1,0 +1,13 @@
+/autonomous_navigation_wss/exploration/build
+/autonomous_navigation_wss/exploration/devel
+/autonomous_navigation_wss/mapping/build
+/autonomous_navigation_wss/mapping/devel
+/autonomous_navigation_wss/navigation/build
+/autonomous_navigation_wss/navigation/devel
+/autonomous_navigation_wss/turtlebot/build
+/autonomous_navigation_wss/turtlebot/devel
+/autonomous_navigation_wss/turtlebot_interaction/build
+/autonomous_navigation_wss/turtlebot_interaction/devel
+/autonomous_navigation_wss/turtlebot_simulation/build
+/autonomous_navigation_wss/turtlebot_simulation/devel
+
