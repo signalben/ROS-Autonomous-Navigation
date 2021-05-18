@@ -1,24 +1,24 @@
 __________________________________________________________________________________
-######## Student ID 10362555, Turtlebot Autonomous Navigation Application ########
+# Turtlebot Autonomous Navigation Application 
 
 The 'failsafe' package has been created as part of this work.
 All other packages/nodes use existing sources, which are not own work. 
 __________________________________________________________________________________
-######## PREREQUISITES ######## 
+## PREREQUISITES  
 
-#Ubuntu          version: 16.04.7 LTS
-#ROS    	 version: kinetic
-#CoppeliaSim Edu version: 4.1.0  
+Ubuntu          version: 16.04.7 LTS
+ROS    	 version: kinetic
+CoppeliaSim Edu version: 4.1.0  
 
-#Additionally an alias in bash.rc for CoppeliaSim is required:
+Additionally an alias in bash.rc for CoppeliaSim is required:
 
 export 
 COPPELIASIM_ROOT_DIR=~/Programs/CoppeliaSim_Edu_V4_1_0_Ubuntu16_04
 alias coppeliaSim="cd $COPPELIASIM_ROOT_DIR && ./coppeliaSim.sh"
 source /opt/ros/kinetic/setup.bash
 _________________________________________________________________________________
-######## INSTALLATION ########
-#To install:
+## INSTALLATION 
+To install:
 
 $ cd 10362555_autonomous_nav/autonomous_navigation_wss
 $ cd turtlebot
@@ -40,50 +40,50 @@ $ cd exploration
 $ catkin_make
 
 __________________________________________________________________________________
-######## RUNNING ########
+## RUNNING 
 
-#To run autonomous navigation stack:
-#In a new terminal:
+###To run autonomous navigation stack:
+In a new terminal:
 $ cd 10362555_autonomous_nav/autonomous_navigation_wss
 $ source source_all.bash
 $ roslaunch vrep_simulation init.launch 
-# Copellia Scene, and rviz should open. Run Coppeliasim.
+ Copellia Scene, and rviz should open. Run Coppeliasim.
 
-#In a new terminal:
+In a new terminal:
 $ cd 10362555_autonomous_nav/autonomous_navigation_wss
 $ source source_all.bash
 $ roslaunch gmapping gmapping.launch  
 
-#In a new terminal:
+In a new terminal:
 $ cd 10362555_autonomous_nav/autonomous_navigation_wss
 $ source source_all.bash
 $ roslaunch roslaunch move_base stack.launch  
 
-#At this point it should be possible to command the robot by setting a nav goal in rviz. 
+At this point it should be possible to command the robot by setting a nav goal in rviz. 
 __________________________________________________________________
-#To use the waypoint failsafe:
+###To use the waypoint failsafe:
 
-#With the navigation stack already open, in a new terminal:
+With the navigation stack already open, in a new terminal:
 $ cd 10362555_autonomous_nav/autonomous_navigation_wss
 $ source source_all.bash
 $ rosrun failsafe failsafe
 
-#The failsafe will now monitor the robots progress towards active goals, and temporarily sets an easier goal if it has become stuck.
-#This should have the effect of improving navigation reliabilty by allowing the local planner to escape false minima. 
-#Stopping and starting the failsafe during navigation is OK
-#However- the failsafe will be unaware of a goal set before it was started.
-#       - stopping the failsafe when a waypoint goal is active will not return the original goal.
+The failsafe will now monitor the robots progress towards active goals, and temporarily sets an easier goal if it has become stuck.
+This should have the effect of improving navigation reliabilty by allowing the local planner to escape false minima. 
+Stopping and starting the failsafe during navigation is OK
+However- the failsafe will be unaware of a goal set before it was started.
+       - stopping the failsafe when a waypoint goal is active will not return the original goal.
 __________________________________________________________________
-#To use autonomous exploration:
+###To use autonomous exploration:
  
-#Close the waypoint failsafe if it is open.
+Close the waypoint failsafe if it is open.
 $ cd 10362555_autonomous_nav/autonomous_navigation_wss
 $ source source_all.bash
 $ roslaunch explore_lite explore.launch
 
-#Goals are automatically set at borders between free space and unknown space 
+Goals are automatically set at borders between free space and unknown space 
 __________________________________________________________________________________
-######## NOTES ########
+## NOTES
 
 vrep_simulation init.launch is located at autonomous_navigation_wss/turtlebot_simulation/src/vrep_simulation/launch
 
