@@ -40,7 +40,7 @@ void getVelocity(const geometry_msgs::Twist::ConstPtr& msg)
 void getPath(const nav_msgs::Path::ConstPtr& msg)
 {
 	if((!shortActive)&&(longActive)){ //only produce once
-		shortGoal = msg->poses[35]; //found to be a suitable distance along path	
+		shortGoal = msg->poses[35]; //found to be a suitable distance along path, potentially unsafe: requires catching paths of <35 poses  	
 	}
 }
 
