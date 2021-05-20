@@ -114,7 +114,7 @@ The parameters for this application used existing .yaml files as a starting poin
 https://github.com/husky/husky/tree/noetic-devel/husky_navigation/config  
 https://github.com/turtlebot/turtlebot_apps/tree/indigo/turtlebot_navigation/param  
 
-Further tuning was done by experiment, and use the following guides:   
+Further tuning was done by experiment, and used the following guides:   
 http://wiki.ros.org/navigation/Tutorials/Navigation%20Tuning%20Guide  
 K. Zheng, “Ros navigation tuning guide,” 2017, arXiv:1706.09068.  
 __________________________________________________________________
