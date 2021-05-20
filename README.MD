@@ -2,7 +2,7 @@ ________________________________________________________________________________
 # Turtlebot2 Autonomous Navigation Application 
 
 The 'failsafe' package has been created as part of this work.  
-All other packages/nodes use existing sources, which are not own work. 
+All other packages/nodes use existing sources.
 __________________________________________________________________________________
 ## PREREQUISITES  
 
@@ -71,8 +71,9 @@ $ rosrun failsafe failsafe
 The failsafe will now monitor the robots progress towards active goals, and temporarily sets an easier goal if it has become stuck.  
 This should have the effect of improving navigation reliabilty by allowing the local planner to escape false minima.  
 Stopping and starting the failsafe during navigation is OK  
-However- the failsafe will be unaware of a goal set before it was started.  
-       - stopping the failsafe when a waypoint goal is active will not return the original goal.
+However:    
+- the failsafe will be unaware of a goal set before it was started.    
+- stopping the failsafe when a waypoint goal is active will not return the original goal.
 __________________________________________________________________
 **To use autonomous exploration:**
  
@@ -107,23 +108,23 @@ __________________________________________________________________
 
 move_base stack.launch is located at autonomous_navigation_wss/navigation/src/move_base/launch  
 Parameters are loaded from yaml files in autonomous_navigation_wss/navigation/src/move_base/param  
-Source: https://github.com/ros-planning/navigation/tree/kinetic-devel
+Source: https://github.com/ros-planning/navigation/tree/kinetic-devel  
 
-The parameters for this application used existing .yaml files as a starting point:
-https://github.com/husky/husky/tree/noetic-devel/husky_navigation/config
-https://github.com/turtlebot/turtlebot_apps/tree/indigo/turtlebot_navigation/param
+The parameters for this application used existing .yaml files as a starting point:  
+https://github.com/husky/husky/tree/noetic-devel/husky_navigation/config  
+https://github.com/turtlebot/turtlebot_apps/tree/indigo/turtlebot_navigation/param  
 
-Further tuning was done by experiment, and use the following guides: 
-http://wiki.ros.org/navigation/Tutorials/Navigation%20Tuning%20Guide
-K. Zheng, “Ros navigation tuning guide,” 2017, arXiv:1706.09068.
+Further tuning was done by experiment, and use the following guides:   
+http://wiki.ros.org/navigation/Tutorials/Navigation%20Tuning%20Guide  
+K. Zheng, “Ros navigation tuning guide,” 2017, arXiv:1706.09068.  
 __________________________________________________________________
 
-rosrun failsafe failsafe is located at autonomous_navigation_wss/navigation/src/failsafe  
-No parameters or launch files are used, node is created by source file: autonomous_navigation_wss/navigation/src/failsafe/src/failsafe.cpp
-The activation of a short (waypoint) goal and the return to the long (original) goal is output in the console. 
+rosrun failsafe failsafe is located at autonomous_navigation_wss/navigation/src/failsafe   
+No parameters or launch files are used, node is created by source file: autonomous_navigation_wss/navigation/src/failsafe/src/failsafe.cpp  
+The activation of a short (waypoint) goal and the return to the long (original) goal is output in the console.   
 __________________________________________________________________
 
-explore_lite explore.launch is located at autonomous_navigation_wss/exploration/src/explore/launch  
+explore_lite explore.launch is located at autonomous_navigation_wss/exploration/src/explore/launch    
 Parameters are set directly from the launch file.  
 Source https://github.com/hrnr/m-explore/tree/kinetic-devel
 __________________________________________________________________
