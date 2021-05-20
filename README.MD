@@ -122,8 +122,8 @@ __________________________________________________________________
 rosrun failsafe failsafe is located at autonomous_navigation_wss/navigation/src/failsafe   
 No parameters or launch files are used, node is created by source file: autonomous_navigation_wss/navigation/src/failsafe/src/failsafe.cpp  
 The activation of a short (waypoint) goal and the return to the long (original) goal is output in the console.
-Substantial existing code was used to create a tf listener from:
-http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20listener%20%28C%2B%2B%29
+Substantial existing code was used to create a tf listener from:  
+http://wiki.ros.org/tf/Tutorials/Writing%20a%20tf%20listener%20%28C%2B%2B%29  
 __________________________________________________________________
 
 explore_lite explore.launch is located at autonomous_navigation_wss/exploration/src/explore/launch    
